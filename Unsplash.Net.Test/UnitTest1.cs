@@ -20,7 +20,7 @@ namespace Unsplash.Net.Test
         public async Task SearchPhotosTest()
         {
             var query = "mountains";
-            var client = new UnsplasharpClient(Credentials.ApplicationId);
+            var client = new UnsplasharpClient(Credentials.AccessKey);
             var photosFound = await client.SearchPhotos(query);
             var photosFoundPaged = await client.SearchPhotos(query, 2);
 
